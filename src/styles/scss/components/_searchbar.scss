@@ -1,0 +1,59 @@
+// SEARCH BAR
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light2);
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 95%;
+    transition: all 0.2s;
+    margin-right: -3.25rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light3);
+    }
+
+    &::placeholder {
+      font-weight: 300;
+      color: var(--color-grey-dark3);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light2);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark3);
+  }
+}

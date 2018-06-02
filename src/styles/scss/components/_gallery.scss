@@ -1,0 +1,14 @@
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__item {
+    width: calc(100% / 3);
+  }
+
+  &__photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
